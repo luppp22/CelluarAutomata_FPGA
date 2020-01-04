@@ -1,0 +1,70 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
+| Date         : Wed Jan 01 15:37:49 2020
+| Host         : DESKTOP-BDSB7DK running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7a100t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    17 |
+| Unused register locations in slices containing registers |    46 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             111 |           46 |
+| No           | No                    | Yes                    |            1919 |         1876 |
+| No           | Yes                   | No                     |              28 |           10 |
+| Yes          | No                    | No                     |              43 |           18 |
+| Yes          | No                    | Yes                    |              82 |           31 |
+| Yes          | Yes                   | No                     |              11 |            6 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++----------------+-----------------------------------------------------------+------------------------------------+------------------+----------------+
+|  Clock Signal  |                       Enable Signal                       |          Set/Reset Signal          | Slice Load Count | Bel Load Count |
++----------------+-----------------------------------------------------------+------------------------------------+------------------+----------------+
+|  CLK_IBUF_BUFG | ps2_mouse_ins/ps2_rx_unit/cnt_reg[3]_i_1__0_n_0           | i_rst_IBUF                         |                1 |              4 |
+|  CLK_IBUF_BUFG | ps2_mouse_ins/ps2_tx_unit/cnt_next                        | i_rst_IBUF                         |                2 |              4 |
+|  CLK_IBUF_BUFG | ps2_mouse_ins/ps2_tx_unit/FSM_onehot_state_reg[4]_i_1_n_0 | i_rst_IBUF                         |                2 |              5 |
+|  CLK_IBUF_BUFG | ps2_mouse_ins/ps2_tx_unit/data_next                       | i_rst_IBUF                         |                2 |              8 |
+|  CLK_IBUF_BUFG | ps2_mouse_ins/__0_n_0                                     | i_rst_IBUF                         |                3 |              8 |
+|  CLK_IBUF_BUFG | ps2_mouse_ins/_inferred__0_n_0                            | i_rst_IBUF                         |                3 |              8 |
+|  CLK_IBUF_BUFG | ps2_mouse_ins/ps2_rx_unit/data_reg[10]_i_1_n_0            | i_rst_IBUF                         |                4 |             10 |
+|  CLK_IBUF_BUFG | ps2_mouse_ins/E[0]                                        | i_rst_IBUF                         |                4 |             11 |
+|  CLK_IBUF_BUFG | ps2_mouse_ins/ptr_x_reg_reg[10][0]                        | i_rst_IBUF                         |                4 |             11 |
+|  CLK_IBUF_BUFG | frame_buffer_ins/vga_ins/v_count[10]_i_1_n_0              |                                    |                2 |             11 |
+|  CLK_IBUF_BUFG | logic_processor_ins/pix_stb                               | logic_processor_ins/SR[0]          |                6 |             11 |
+|  CLK_IBUF_BUFG | ps2_mouse_ins/ps2_tx_unit/hold_next                       | i_rst_IBUF                         |                6 |             13 |
+|  CLK_IBUF_BUFG |                                                           | automaton_ins/inq_y_fb3[6]_i_1_n_0 |                5 |             14 |
+|  CLK_IBUF_BUFG |                                                           | automaton_ins/sel_y_fb3[6]_i_1_n_0 |                5 |             14 |
+|  CLK_IBUF_BUFG | logic_processor_ins/clk_cnt_2[31]_i_1_n_0                 |                                    |               16 |             32 |
+|  CLK_IBUF_BUFG |                                                           |                                    |               48 |            119 |
+|  CLK_IBUF_BUFG |                                                           | i_rst_IBUF                         |             1876 |           1919 |
++----------------+-----------------------------------------------------------+------------------------------------+------------------+----------------+
+
+
